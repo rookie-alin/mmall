@@ -1,7 +1,7 @@
 <script lang="ts" setup>
-import { ref } from "vue";
+import { Ref, ref } from "vue";
 
-    let carNum:Number=ref(0);
+    let carNum:Ref<number>=ref(0);
 
 </script>
 
