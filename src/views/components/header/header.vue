@@ -1,15 +1,19 @@
 <script lang="ts" setup>
 import { Ref, ref } from "vue";
+import {useRouter} from 'vue-router'
+const router=useRouter();
 
     let carNum:Ref<number>=ref(0);
-
+const goRegister=()=>{
+    router.push('/register')
+}
 </script>
 
 <template>
     <div class="header">
         <div class="left">
             <span class="login">登录</span>
-            <span class="zhuce">注册</span>
+            <span class="zhuce" @click="goRegister">注册</span>
         </div>
         <div class="right">
             <span>购物车({{carNum}})</span>
